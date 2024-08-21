@@ -41949,15 +41949,15 @@ mixin _$ListMessagesResponse {
 
   /// The ID of the first message in the list.
   @JsonKey(name: 'first_id')
-  String get firstId => throw _privateConstructorUsedError;
+  String? get firstId => throw _privateConstructorUsedError;
 
   /// The ID of the last message in the list.
   @JsonKey(name: 'last_id')
-  String get lastId => throw _privateConstructorUsedError;
+  String? get lastId => throw _privateConstructorUsedError;
 
   /// Whether there are more messages to retrieve.
   @JsonKey(name: 'has_more')
-  bool get hasMore => throw _privateConstructorUsedError;
+  bool? get hasMore => throw _privateConstructorUsedError;
 
   /// Serializes this ListMessagesResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -41978,9 +41978,9 @@ abstract class $ListMessagesResponseCopyWith<$Res> {
   $Res call(
       {String object,
       List<MessageObject> data,
-      @JsonKey(name: 'first_id') String firstId,
-      @JsonKey(name: 'last_id') String lastId,
-      @JsonKey(name: 'has_more') bool hasMore});
+      @JsonKey(name: 'first_id') String? firstId,
+      @JsonKey(name: 'last_id') String? lastId,
+      @JsonKey(name: 'has_more') bool? hasMore});
 }
 
 /// @nodoc
@@ -42001,9 +42001,9 @@ class _$ListMessagesResponseCopyWithImpl<$Res,
   $Res call({
     Object? object = null,
     Object? data = null,
-    Object? firstId = null,
-    Object? lastId = null,
-    Object? hasMore = null,
+    Object? firstId = freezed,
+    Object? lastId = freezed,
+    Object? hasMore = freezed,
   }) {
     return _then(_value.copyWith(
       object: null == object
@@ -42014,18 +42014,18 @@ class _$ListMessagesResponseCopyWithImpl<$Res,
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<MessageObject>,
-      firstId: null == firstId
+      firstId: freezed == firstId
           ? _value.firstId
           : firstId // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastId: null == lastId
+              as String?,
+      lastId: freezed == lastId
           ? _value.lastId
           : lastId // ignore: cast_nullable_to_non_nullable
-              as String,
-      hasMore: null == hasMore
+              as String?,
+      hasMore: freezed == hasMore
           ? _value.hasMore
           : hasMore // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ) as $Val);
   }
 }
@@ -42041,9 +42041,9 @@ abstract class _$$ListMessagesResponseImplCopyWith<$Res>
   $Res call(
       {String object,
       List<MessageObject> data,
-      @JsonKey(name: 'first_id') String firstId,
-      @JsonKey(name: 'last_id') String lastId,
-      @JsonKey(name: 'has_more') bool hasMore});
+      @JsonKey(name: 'first_id') String? firstId,
+      @JsonKey(name: 'last_id') String? lastId,
+      @JsonKey(name: 'has_more') bool? hasMore});
 }
 
 /// @nodoc
@@ -42061,9 +42061,9 @@ class __$$ListMessagesResponseImplCopyWithImpl<$Res>
   $Res call({
     Object? object = null,
     Object? data = null,
-    Object? firstId = null,
-    Object? lastId = null,
-    Object? hasMore = null,
+    Object? firstId = freezed,
+    Object? lastId = freezed,
+    Object? hasMore = freezed,
   }) {
     return _then(_$ListMessagesResponseImpl(
       object: null == object
@@ -42074,18 +42074,18 @@ class __$$ListMessagesResponseImplCopyWithImpl<$Res>
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<MessageObject>,
-      firstId: null == firstId
+      firstId: freezed == firstId
           ? _value.firstId
           : firstId // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastId: null == lastId
+              as String?,
+      lastId: freezed == lastId
           ? _value.lastId
           : lastId // ignore: cast_nullable_to_non_nullable
-              as String,
-      hasMore: null == hasMore
+              as String?,
+      hasMore: freezed == hasMore
           ? _value.hasMore
           : hasMore // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -42096,9 +42096,9 @@ class _$ListMessagesResponseImpl extends _ListMessagesResponse {
   const _$ListMessagesResponseImpl(
       {required this.object,
       required final List<MessageObject> data,
-      @JsonKey(name: 'first_id') required this.firstId,
-      @JsonKey(name: 'last_id') required this.lastId,
-      @JsonKey(name: 'has_more') required this.hasMore})
+      @JsonKey(name: 'first_id') this.firstId,
+      @JsonKey(name: 'last_id') this.lastId,
+      @JsonKey(name: 'has_more') this.hasMore})
       : _data = data,
         super._();
 
@@ -42123,17 +42123,17 @@ class _$ListMessagesResponseImpl extends _ListMessagesResponse {
   /// The ID of the first message in the list.
   @override
   @JsonKey(name: 'first_id')
-  final String firstId;
+  final String? firstId;
 
   /// The ID of the last message in the list.
   @override
   @JsonKey(name: 'last_id')
-  final String lastId;
+  final String? lastId;
 
   /// Whether there are more messages to retrieve.
   @override
   @JsonKey(name: 'has_more')
-  final bool hasMore;
+  final bool? hasMore;
 
   @override
   String toString() {
@@ -42179,9 +42179,9 @@ abstract class _ListMessagesResponse extends ListMessagesResponse {
   const factory _ListMessagesResponse(
           {required final String object,
           required final List<MessageObject> data,
-          @JsonKey(name: 'first_id') required final String firstId,
-          @JsonKey(name: 'last_id') required final String lastId,
-          @JsonKey(name: 'has_more') required final bool hasMore}) =
+          @JsonKey(name: 'first_id') final String? firstId,
+          @JsonKey(name: 'last_id') final String? lastId,
+          @JsonKey(name: 'has_more') final bool? hasMore}) =
       _$ListMessagesResponseImpl;
   const _ListMessagesResponse._() : super._();
 
@@ -42199,17 +42199,17 @@ abstract class _ListMessagesResponse extends ListMessagesResponse {
   /// The ID of the first message in the list.
   @override
   @JsonKey(name: 'first_id')
-  String get firstId;
+  String? get firstId;
 
   /// The ID of the last message in the list.
   @override
   @JsonKey(name: 'last_id')
-  String get lastId;
+  String? get lastId;
 
   /// Whether there are more messages to retrieve.
   @override
   @JsonKey(name: 'has_more')
-  bool get hasMore;
+  bool? get hasMore;
 
   /// Create a copy of ListMessagesResponse
   /// with the given fields replaced by the non-null parameter values.
