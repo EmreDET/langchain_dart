@@ -4103,9 +4103,9 @@ _$ListMessagesResponseImpl _$$ListMessagesResponseImplFromJson(
       data: (json['data'] as List<dynamic>)
           .map((e) => MessageObject.fromJson(e as Map<String, dynamic>))
           .toList(),
-      firstId: json['first_id'] as String,
-      lastId: json['last_id'] as String,
-      hasMore: json['has_more'] as bool,
+      firstId: json['first_id'] as String?,
+      lastId: json['last_id'] as String?,
+      hasMore: json['has_more'] as bool?,
     );
 
 Map<String, dynamic> _$$ListMessagesResponseImplToJson(
